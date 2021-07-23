@@ -1,0 +1,94 @@
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Zilla Slab', serif; */
+
+footer{
+    background-color: #aaa;
+}
+
+nav{
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    }
+
+h1, h2{
+    font-family:'Zilla Slab', serif;
+}
+
+.hero {
+    background: url(../images/papel.jpg) no-repeat;
+    background-size: cover;
+    height: 50vh;
+    min-height: 600px;
+    /* color: white; */
+}
+
+.notaAlPie {
+    color: rgb(80, 71, 71);
+    ;
+}
+
+
+ul .lista-novedades {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+
+.lista-novedades li {
+    margin: 4px 0;
+    background-color: #dadada;   
+}
+
+.lista-novedades li a {
+    background-color: #fff;
+    /* font-family: "Zilla Slab", serif; */
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    transition: all .2s ease-in-out;
+    display: block;
+}
+
+.lista-novedades li a img {
+    width: 120px;
+    height: 50px;
+    filter: grayscale();
+    transition: all .2s ease-in-out;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+
+.fotoS {
+    width: 120px;
+    height: 50px;
+    filter: grayscale();
+    transition: all .2s ease-in-out;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+
+.lista-novedades li a:hover img {
+    filter: none;
+    margin-right: 1.4rem;
+    opacity: 1;
+}
+
+.modal-body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousel-item {
+    color: black;
+}
+
+.servicios {
+    background-color: #dadada;
+    padding-bottom: 4rem !important;
+}
+
+.carousel-caption {
+    background-color:rgb(197, 197, 197, 0.5);
+    text-align: center;
+    padding: 50px 20px;
+    text-shadow: black;
+}
