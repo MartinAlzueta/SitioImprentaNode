@@ -47,7 +47,7 @@ pool.query('select * from empleados').then(function (resultados) {
 // });
 
 //  update
-// var id = 2;
+// var id = 26;
 // var obj = {
 //   nombre: 'Homero',
 //   apellido: 'Thompson'
@@ -59,7 +59,7 @@ pool.query('select * from empleados').then(function (resultados) {
 
 // delete
 
-// var id = 17;
+// var id = 27;
 
 // pool.query('delete from empleados where id_emp=?', [id]).then(function (resultados) {
 //   console.log(resultados);
