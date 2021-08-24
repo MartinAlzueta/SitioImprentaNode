@@ -3,7 +3,10 @@ font-family: 'Zilla Slab', serif; */
 
 footer{
     background-color: #aaa;
-}
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
 
 nav{
     font-family: 'Roboto', sans-serif;
