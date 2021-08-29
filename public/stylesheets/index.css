@@ -2,8 +2,8 @@
 font-family: 'Zilla Slab', serif; */
 
 footer{
-    background-color: #aaa;
-        position: absolute;
+    background-color: #a0a0a0;
+        /* position: absolute; */
         bottom: 0;
         width: 100%;
       }

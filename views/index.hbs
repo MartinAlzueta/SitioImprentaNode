@@ -55,33 +55,28 @@
             <div class="col-md-5 offset-md3 py-3">
                 <h2 class="text-center"> Novedades</h2>
                 <ul class="lista-novedades">
-                    <li><a href="#" data-toggle="modal" data-target="#exampleModal1"><img src="images/tinta1-s.jpg"
-                                alt="Tintas de colores">
-                            Ahora hacemos esto. </a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#exampleModal2"><img src="images/tinta1-s.jpg"
-                                alt="Panntone">
-                            Y también esto otro... </a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#exampleModal3"><img src="images/tinta1-s.jpg"
-                                alt="Tintas de colores">
-                            Pronto haremos otras cosas! </a></li>
+                    {{#each novedades}}
+                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modal{{id}}"><img src="images/tinta1-s.jpg"
+                     alt="Tintas de colores"> {{titulo}} </a>
+                    </li>
+                    {{/each}}
                 </ul>
             </div>
 
             <!-- Modal 1 -->
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+            {{#each novedades}}
+            <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Título</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita inventore repellat,
-                                vero odio harum eligendi placeat aspernatur adipisci repudiandae reprehenderit, quas
-                                libero provident fuga totam aliquam suscipit ullam? Aliquam, reprehenderit. </p>
+                            <p> {{cuerpo}} </p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Volver</button>
@@ -89,7 +84,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal 2 -->
+            {{/each}}
+            {{!-- <!-- Modal 2 -->
             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
@@ -132,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- Fin de Novedades -->
 
             <!-- Carousel -->
@@ -232,10 +228,10 @@
         <!-- fin del conteiner-fluid -->
 
         <!-- Footer -->
-
+{{!-- 
         <footer class="text-center"> Diseñado por: Martín Alzueta, 2021.
 
-        </footer>
+        </footer> --}}
 
 
 

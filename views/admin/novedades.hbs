@@ -7,7 +7,44 @@
 
 <div class="row">
     <div class="col">
-        <a href="/admin/login/logout" style="margin-top: 60;"><button type="button" class="btn btn-dark">Cerrar sesión</button>
+        <a href="/admin/login/logout" style="margin-top: 60;"><button type="button" class="btn btn-dark">Cerrar
+                sesión</button>
         </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-7">
+        <h3>Listado de novedades</h3>
+    </div>
+    <div class="col-2 text-right">
+        <a href="#" class="btn btn-success">
+            <i class="fa fa-plus"></i> Nuevo </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each novedades}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{titulo}}</td>
+                    <td class="text-center">
+                        <a href="#" class="btn btn-sm btn-secondary"> <i class="fa fa-edit"></i></a>
+                        <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-sm btn-secondary"> <i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
     </div>
 </div>
