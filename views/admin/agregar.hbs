@@ -2,13 +2,17 @@
     <div class="row">
         <div class="col-6 offset-3">
             <h4>Agregar una novedad</h4>
-            <form action="/admin/novedades/agregar" method="post">
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     {{!-- <label for="exampleInputEmail1">Email address</label> --}}
                     <input type="text" class="form-control" placeholder="Título" name="titulo">
                 </div>
                 <div class="form-group">
                     <textarea type="text" class="form-control" name="cuerpo" placeholder="Texto"></textarea>
+                </div>
+                <div class="form-group">
+                    <label> Imagen: <input type="file" name="imagen" id="imagen">
+                    </label>
                 </div>
                 <button type="submit" class="btn btn-primary">Agregar</button>
             </form>

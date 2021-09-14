@@ -12,8 +12,23 @@
                     <textarea type="text" class="form-control" name="cuerpo"
                         placeholder="Texto">{{novedad.cuerpo}}</textarea>
                 </div>
+
+
+
+                <div class="form-group">
+                    <p>
+                        <label> Imagen: <input type="file" name="imagen" id="imagen"></label>
+                    </p>
+                    <p>
+                        <label> <input type="checkbox" name="img_delete" id="img_delete" value="1">
+                            ¿Eliminar imagen actual? </label>
+                        <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                    </p>
+                </div>
                 <button type="submit" class="btn btn-primary">Modificar</button>
+
             </form>
+
             {{#if error}}
             <h6 style="color:red"> {{message}}</h6>
             {{/if}}

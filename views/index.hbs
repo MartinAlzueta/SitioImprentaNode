@@ -56,8 +56,8 @@
                 <h2 class="text-center"> Novedades</h2>
                 <ul class="lista-novedades">
                     {{#each novedades}}
-                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modal{{id}}"><img src="images/tinta1-s.jpg"
-                     alt="Tintas de colores"> {{titulo}} </a>
+                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modal{{id}}"><img src="{{imagen}}" width="120"
+                     alt="{{titulo}}"> {{titulo}} </a>
                     </li>
                     {{/each}}
                 </ul>
@@ -76,6 +76,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
+                            <img src="{{imagen}}">
                             <p> {{cuerpo}} </p>
                         </div>
                         <div class="modal-footer">

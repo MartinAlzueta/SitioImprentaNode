@@ -8,6 +8,8 @@ require('dotenv').config();
 var pool = require('./models/bd');
 var session = require('express-session');
 
+var fileUpload = require('express-fileupload');
+
 
 var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
@@ -29,11 +31,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
 app.use(session({
   secret: 'aVmQ8eprVUCTe5mpvMZraVmQ8eprVUCTe5mpvMZr' ,
   resave: false,
   saveUninitialized: true
 }))
+
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}));
 
 secured = async(req,res,next) =>{
   try{
